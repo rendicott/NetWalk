@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <target id="1">
+    <!-- REQUIRED -->
+    <!-- All targets need at least one entrypoint 
+        and auth possibility at a bare minimum. Currently with NETWALK v0.5: The parent/child relationship logic will not work if entrypoints from multiple unrelated sites are submitted for a single target.  -->
+    <entrypoint id="1">
+      <attributes>
+        <ipaddr>12.8.8.9</ipaddr>
+        <!-- (PORT IGNORED / NOT SUPPORTED DUE TO EXPECT LIMITATIONS) -->
+        <port>22</port>
+        <!--The hostname in the input xml will be used for initial logging identification until the NETWALK crawler can determine the NE's self reported hostname.-->
+        <hostname></hostname>
+      </attributes>
+    </entrypoint>
+    <entrypoint id="2">
+      <attributes>
+        <ipaddr>12.8.9.1</ipaddr>
+        <!-- (PORT IGNORED / NOT SUPPORTED DUE TO EXPECT LIMITATIONS) -->
+        <port>22</port>
+        <hostname></hostname>
+      </attributes>
+    </entrypoint>
+    <auth>
+      <!-- A list of authentication possibilities. These possibilities will be turned into objects and then the crawler will cycle through them for each Entrypoint until it finds a combination that works. If it works it will add weight to the possibility which will cause the crawler to try those successful possibilities first. When a possibility is successful on a particular Entrypoint, that possibility will be attached to the Entrypoint for all future connections during the session.  -->
+      <possibility id="1">
+        <username>admin</username>
+        <password>INSERTPASSWORDHERE</password>
+      </possibility>
+      <possibility id="2">
+        <username>user</username>
+        <password>INSERTPASSWORDHERE</password>
+      </possibility>
+      <possibility id="3">
+        <username>manager</username>
+        <password>INSERTPASSWORDHERE</password>
+      </possibility>
+      <possibility id="4">
+        <username>readonly</username>
+        <password>INSERTPASSWORDHERE</password>
+      </possibility>
+    </auth>
+    <!-- OPTIONAL for crawls. REQUIRED for COMMONID to NE HOSTNAME mapping.-->
+    <members>
+      <!-- A list of members is a known list of network elements
+            that could potentially live within the SCR/SCS network 
+            topology. At a bare minimum, a unique id number is required
+            for each member object. More info is better but optional -->
+      <member id="2">
+        <hostname>DNVRCOM04518</hostname>
+        <ipaddr>12.8.8.10</ipaddr>
+        <netmask>255.255.255.224</netmask>
+        <defaultroute>12.8.8.7</defaultroute>
+        <dhcps>12.8.8.9</dhcps>
+        <!--The MAC address is required in order to map the hostname to the discovered Network Element-->
+        <mac>00:30:AB:2B:99:15</mac>
+        <!--
+                A flexible object that can be attached to a Member with 
+                various additional information. If the member is discovered
+                this information will be passed on directly into the output 
+                XML associated with the discovered network element. An 
+                example of how this could be used is when you know the 
+                hostname of an element and want to display that hostname
+                in the output topology associated with the discovered object.
+                
+                The tag element will be parsed to potentially use to 
+                alter the crawler's behavior in the future. The 'tag' property 
+                is required upon instantiation. 
+                -->
+        <!--For now-The 'custom' tag is transferred into the NETWALK object structure as the network element 'type'-->
+        <custom tag="metrocell">
+          <!--The FPIP stands for "firstPublicIpInPath" and for metrocells this can generally be used as an Entrypoint for NETWALK-->
+          <fpip>12.8.8.9</fpip>
+        </custom>
+      </member>
+      <member id="3">
+        <hostname>DNVRCOM04517</hostname>
+        <ipaddr>12.8.8.11</ipaddr>
+        <netmask></netmask>
+        <defaultroute></defaultroute>
+        <dhcps></dhcps>
+        <mac></mac>
+        <custom tag="metrocell">
+          <fpip>12.8.8.9</fpip>
+        </custom>
+      </member>
+      <member id="4">
+        <hostname>DNVRCOM04023</hostname>
+        <ipaddr>12.8.8.12</ipaddr>
+        <netmask></netmask>
+        <defaultroute></defaultroute>
+        <dhcps></dhcps>
+        <mac></mac>
+        <custom tag="metrocell">
+          <fpip>12.8.8.9</fpip>
+        </custom>
+      </member>
+      <member id="5">
+        <hostname>DNVRCOM04526</hostname>
+        <ipaddr>12.8.8.13</ipaddr>
+        <netmask></netmask>
+        <defaultroute></defaultroute>
+        <dhcps></dhcps>
+        <mac></mac>
+      </member>
+      <member id="6">
+        <hostname>DNVRCOM04528</hostname>
+        <ipaddr>12.8.8.14</ipaddr>
+        <netmask></netmask>
+        <defaultroute></defaultroute>
+        <fpip></fpip>
+        <dhcps></dhcps>
+        <mac></mac>
+      </member>
+      <member id="7">
+        <hostname>DNVRCOM04520</hostname>
+        <ipaddr>12.8.8.15</ipaddr>
+        <netmask></netmask>
+        <defaultroute></defaultroute>
+        <dhcps></dhcps>
+        <mac></mac>
+      </member>
+      <member id="8">
+        <hostname>DNVRCOM04519</hostname>
+        <ipaddr>12.8.8.16</ipaddr>
+        <netmask></netmask>
+        <defaultroute></defaultroute>
+        <dhcps></dhcps>
+        <mac></mac>
+      </member>
+      <member id="9">
+        <hostname>DNVRCOM04521</hostname>
+        <ipaddr>12.8.8.17</ipaddr>
+        <netmask></netmask>
+        <defaultroute></defaultroute>
+        <dhcps></dhcps>
+        <mac></mac>
+      </member>
+      <member id="10">
+        <hostname>DNVRCOM04532</hostname>
+        <ipaddr>12.8.8.18</ipaddr>
+        <netmask>255.255.255.224</netmask>
+        <defaultroute>12.8.8.9</defaultroute>
+        <dhcps>12.8.8.9</dhcps>
+        <mac>00:30:AB:2B:98:D6</mac>
+        <custom tag="metrocell">
+          <fpip>12.8.8.9</fpip>
+        </custom>
+      </member>
+      <member id="11">
+        <hostname>DNVRCOM04525</hostname>
+        <ipaddr>12.8.8.19</ipaddr>
+        <netmask></netmask>
+        <defaultroute></defaultroute>
+        <dhcps></dhcps>
+        <mac></mac>
+        <custom tag="metrocell">
+          <fpip>12.8.8.9</fpip>
+        </custom>
+      </member>
+    </members>
+  </target>
+</root>

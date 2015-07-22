@@ -1,0 +1,78 @@
+#!/usr/bin/expect
+
+set CTRL_C     \x03       ;# http://wiki.tcl.tk/3038
+
+
+set ipaddr [lindex $argv 0]
+set port [lindex $argv 1]
+set username [lindex $argv 2]
+set password [lindex $argv 3]
+set timeout [lindex $argv 4]
+
+set ipaddr_1 [lindex $argv 5]
+set port_1 [lindex $argv 6]
+set username_1 [lindex $argv 7]
+set password_1 [lindex $argv 8]
+set timeout_1 [lindex $argv 9]
+
+
+set ipaddr_2 [lindex $argv 10]
+set port_2 [lindex $argv 11]
+set username_2 [lindex $argv 12]
+set password_2 [lindex $argv 13]
+set timeout_2 [lindex $argv 14]
+
+#set timeout 
+
+spawn ssh "$username@$ipaddr"
+expect { 
+    "yes/no" {send "yes\r"
+            expect "*?assword" { send $password\r }
+            }
+    "*?assword" { send $password\r }
+    "Connection closed by remote host" {puts "Need to wait."; exit 1}
+    "Packet corrupt" {puts "Need to wait." ; exit 1}
+    "Connection refused" {puts "Timed Out!"; exit 1}
+    timeout {send $CTRL_C; puts "Timed Out!"; exit 1}
+}
+
+expect {
+    ">" {send "ssh $ipaddr_1\r"
+        expect ":" {send "$username_1\r"
+            expect { 
+                "yes/no" {send "yes\r"
+                        expect "*?assword" { send $password_1\r }
+                        }
+                "*?assword" { send $password_1\r }
+                "Connection closed by remote host" {puts "Need to wait."; exit 1}
+                "Packet corrupt" {puts "Need to wait." ; exit 1}
+                "Connection refused" {puts "Timed Out!"; exit 1}
+                timeout {send $CTRL_C; puts "Timed Out!"; exit 1}
+                }
+            expect {
+                ">" {send "ssh $ipaddr_2\r"
+                    expect ":" {send "$username_2\r"
+                        expect { 
+                            "yes/no" {send "yes\r"
+                                    expect "*?assword" { send $password_2\r }
+                                    }
+                            "*?assword" { send $password_2\r }
+                            "Connection closed by remote host" {puts "Need to wait."; exit 1}
+                            "Packet corrupt" {puts "Need to wait." ; exit 1}
+                            "Connection refused" {puts "Timed Out!"; exit 1}
+                            timeout {send $CTRL_C; puts "Timed Out!"; exit 1}
+                            }
+                        expect {
+                            ">" {send "show system\r"
+                                    expect ">" {send "exit\r"}
+                                }
+                                }
+                                }
+                    }
+                    }
+                    }
+                    }
+    timeout {send $CTRL_C; puts "Timed Out!"; exit 1}
+    }
+
+exit 0

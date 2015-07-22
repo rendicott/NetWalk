@@ -1,0 +1,37 @@
+#!/usr/bin/expect
+
+set CTRL_C     \x03       ;# http://wiki.tcl.tk/3038
+
+
+set ipaddr [lindex $argv 0]
+set port [lindex $argv 1]
+set username [lindex $argv 2]
+set password [lindex $argv 3]
+set timeout [lindex $argv 4]
+#set timeout 
+
+spawn ssh "$username@$ipaddr"
+expect { 
+    "yes/no" {send "yes\r"
+            expect "*?assword" { send $password\r }
+            }
+    "*?assword" { send $password\r }
+    "Connection closed by remote host" {puts "Need to wait."; exit 1}
+    "Packet corrupt" {puts "Need to wait." ; exit 1}
+    "Connection refused" {puts "Timed Out!"; exit 1}
+    timeout {send $CTRL_C; puts "Timed Out!"; exit 1}
+}
+
+expect {
+    ">" {send "show system\r" 
+        expect ">" { send "exit\r" }
+        }
+    "#" {send "show system information\r" 
+         expect ")" { send "g" 
+            expect "#" {send "logout\r"}
+            }
+        }
+    timeout {send $CTRL_C; puts "Timed Out!"; exit 1}
+    }
+
+exit 0

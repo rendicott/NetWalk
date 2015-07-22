@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <target id="8103843172">
+    <!-- REQUIRED -->
+    <!-- All targets need at least one entrypoint 
+        and auth possibility at a bare minimum. Currently with NETWALK v0.5: The parent/child relationship logic will not work if entrypoints from multiple unrelated sites are submitted for a single target.  -->
+    <entrypoint id="8801479913">
+      <attributes>
+        <ipaddr>11.28.76.1</ipaddr>
+        <!-- (PORT IGNORED / NOT SUPPORTED DUE TO EXPECT LIMITATIONS) -->
+        <port>22</port>
+        <!--The hostname in the input xml will be used for initial logging identification until the NETWALK crawler can determine the NE's self reported hostname.-->
+        <hostname>SCSR--1-BOA_Adison-8440685568</hostname>
+      </attributes>
+    </entrypoint>
+    <auth>
+      <!-- A list of authentication possibilities. These possibilities will be turned into objects and then the crawler will cycle through them for each Entrypoint until it finds a combination that works. If it works it will add weight to the possibility which will cause the crawler to try those successful possibilities first. When a possibility is successful on a particular Entrypoint, that possibility will be attached to the Entrypoint for all future connections during the session.  -->
+      <possibility id="1144707157">
+        <username>admin</username>
+        <password>INSERTPASSWORDHERE</password>
+      </possibility>
+      <possibility id="9655991944">
+        <username>user</username>
+        <password>INSERTPASSWORDHERE</password>
+      </possibility>
+      <possibility id="0903952676">
+        <username>admin</username>
+        <password>INSERTPASSWORDHERE</password>
+      </possibility>
+      <possibility id="0195994424">
+        <username>admin</username>
+        <password>INSERTPASSWORDHERE</password>
+      </possibility>
+    </auth>
+    <!-- OPTIONAL for crawls. REQUIRED for COMMONID to NE HOSTNAME mapping.-->
+    <members>
+      <!-- A list of members is a known list of network elements
+            that could potentially live within the SCR/SCS network 
+            topology. At a bare minimum, a unique id number is required
+            for each member object. More info is better but optional -->
+      <member id="1216222107">
+        <hostname>DLLSDXM15263</hostname>
+        <ipaddr>11.28.76.24</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <!--The MAC address is required in order to map the hostname to the discovered Network Element-->
+        <mac>00:30:ab:2b:19:2d</mac>
+        <!--
+                A flexible object that can be attached to a Member with 
+                various additional information. If the member is discovered
+                this information will be passed on directly into the output 
+                XML associated with the discovered network element. An 
+                example of how this could be used is when you know the 
+                hostname of an element and want to display that hostname
+                in the output topology associated with the discovered object.
+                
+                The tag element will be parsed to potentially use to 
+                alter the crawler's behavior in the future. The 'tag' property 
+                is required upon instantiation. 
+                -->
+        <!--For now-The 'custom' tag is transferred into the NETWALK object structure as the network element 'type'-->
+        <custom tag="metrocell">
+          <!--The FPIP stands for "firstPublicIpInPath" and for metrocells this can generally be used as an Entrypoint for NETWALK-->
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="5861795254">
+        <hostname>DLLSDXM15273</hostname>
+        <ipaddr>11.28.76.38</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:19:d5</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="2006684994">
+        <hostname>DLLSDXM15268</hostname>
+        <ipaddr>11.28.76.17</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:19:73</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="4702262326">
+        <hostname>DLLSDXM15271</hostname>
+        <ipaddr>11.28.76.36</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:19:dc</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="6679871273">
+        <hostname>DLLSDXM15269</hostname>
+        <ipaddr>11.28.76.32</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:19:84</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="2786920829">
+        <hostname>DLLSDXM15278</hostname>
+        <ipaddr>11.28.76.22</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:19:de</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="0123222277">
+        <hostname>DLLSDXM15281</hostname>
+        <ipaddr>11.28.76.31</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:19:c4</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="9667457731">
+        <hostname>DLLSDXM15259</hostname>
+        <ipaddr>11.28.76.39</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:18:9e</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="5265707506">
+        <hostname>DLLSDXM15266</hostname>
+        <ipaddr>11.28.76.30</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:19:65</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="9623965280">
+        <hostname>DLLSDXM15044</hostname>
+        <ipaddr>11.28.76.43</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:18:c4</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="7203348254">
+        <hostname>DLLSDXM15257</hostname>
+        <ipaddr>11.28.76.25</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:18:5c</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="9148007123">
+        <hostname>DLLSDXM15255</hostname>
+        <ipaddr>11.28.76.27</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:18:22</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="3593942971">
+        <hostname>DLLSDXM15277</hostname>
+        <ipaddr>11.28.76.33</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:19:a1</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="9407662932">
+        <hostname>DLLSDXM15253</hostname>
+        <ipaddr>11.28.76.48</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:18:76</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="4578653526">
+        <hostname>DLLSDXM15275</hostname>
+        <ipaddr>11.28.76.37</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:19:d3</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="2981698704">
+        <hostname>DLLSDXM15274</hostname>
+        <ipaddr>11.28.76.16</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:19:d7</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="0297703277">
+        <hostname>DLLSDXM15270</hostname>
+        <ipaddr>11.28.76.18</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:19:da</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="4719818139">
+        <hostname>DLLSDXM15267</hostname>
+        <ipaddr>11.28.76.35</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:18:e2</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="1077004100">
+        <hostname>DLLSDXM15250</hostname>
+        <ipaddr>11.28.76.29</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:18:30</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="4912292137">
+        <hostname>DLLSDXM15254</hostname>
+        <ipaddr>11.28.76.28</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:18:68</mac>
+        <custom tag="metrocell">
+          <fpip>0.0.0.0</fpip>
+        </custom>
+      </member>
+      <member id="1973179460">
+        <hostname>DLLSDXM15252</hostname>
+        <ipaddr>11.28.76.47</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:18:2d</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="6327586837">
+        <hostname>DLLSDXM15262</hostname>
+        <ipaddr>11.28.76.42</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:19:52</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="9056428641">
+        <hostname>DLLSDXM15251</hostname>
+        <ipaddr>11.28.76.49</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:18:af</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="6830094650">
+        <hostname>DLLSDXM15272</hostname>
+        <ipaddr>11.28.76.51</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:19:df</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="9548185414">
+        <hostname>DLLSDXM15248</hostname>
+        <ipaddr>11.28.76.44</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:18:27</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="0750230474">
+        <hostname>DLLSDXM15280</hostname>
+        <ipaddr>11.28.76.19</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:19:8c</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="0525551678">
+        <hostname>DLLSDXM15282</hostname>
+        <ipaddr>11.28.76.15</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:19:c6</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="6242900768">
+        <hostname>DLLSDXM15264</hostname>
+        <ipaddr>11.28.76.50</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:19:60</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="9613906400">
+        <hostname>DLLSDXM15265</hostname>
+        <ipaddr>11.28.76.34</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:18:f9</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="9413648864">
+        <hostname>DLLSDXM15258</hostname>
+        <ipaddr>11.28.76.40</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:18:9b</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="7401661178">
+        <hostname>DLLSDXM15279</hostname>
+        <ipaddr>11.28.76.20</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:19:85</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="4976864257">
+        <hostname>DLLSDXM15261</hostname>
+        <ipaddr>11.28.76.41</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:18:fc</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="3721322016">
+        <hostname>DLLSDXM15276</hostname>
+        <ipaddr>11.28.76.21</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:19:9e</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="6709688249">
+        <hostname>DLLSDXM15256</hostname>
+        <ipaddr>11.28.76.23</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:18:5b</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="2498140272">
+        <hostname>DLLSDXM15249</hostname>
+        <ipaddr>11.28.76.26</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:18:41</mac>
+        <custom tag="metrocell">
+          <fpip>0.0.0.0</fpip>
+        </custom>
+      </member>
+      <member id="7304195925">
+        <hostname>DLLSDXM15283</hostname>
+        <ipaddr>11.28.76.46</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:19:eb</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+      <member id="0099063702">
+        <hostname>DLLSDXM15260</hostname>
+        <ipaddr>11.28.76.45</ipaddr>
+        <netmask>255.255.255.192</netmask>
+        <defaultroute>11.28.76.1</defaultroute>
+        <dhcps>11.28.76.1</dhcps>
+        <mac>00:30:ab:2b:18:e3</mac>
+        <custom tag="metrocell">
+          <fpip>11.28.76.1</fpip>
+        </custom>
+      </member>
+    </members>
+  </target>
+</root>

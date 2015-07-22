@@ -1,0 +1,1227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <!-- To begin with, four main types, SCS, SCR, METRO, GENERIC-->
+    <ne id='1' type='scs'>
+        <hostname>AEB2-MAIN</hostname>
+        <!-- parents should only include immediate parents -->
+        <parents></parents>
+        <!-- children should only include immediate children -->
+        <children>
+            <ne id='2' type='scs'>
+                <!-- The port parameter of the child NE is the source port on current NE-->
+                <port id="1" slotport='1/1'></port>    
+            </ne>
+            <ne id='3' type='scs'>
+                <port id="2" slotport='1/2'></port>    
+            </ne>
+        </children>
+        <!-- Need intelligence to choose primary MAC, for ALU SCR/SCS, chassis is best.
+        I'm debating whether or not to include ALL detected MACs from the NE in this
+        global 'macs' section. -->
+        <macs>
+            <mac>e8:e7:32:a3:06:dc</mac>
+            <mac>e8:e7:32:a3:06:dc</mac>
+        </macs>
+        <ips>
+            <ip>
+                <address></address>
+                <mask></mask>
+            </ip>
+        </ips>
+        <pulltimestamp>20150217_122025 EST</pulltimestamp>
+        <!-- Everything above this section could be almost any generic network element
+        This next type section will be generated after logic has been applied to the 
+        crawled data. --> 
+        <type id='scs'>
+            <!-- First we'll go through and list all of the ports on the SCS -->
+            <ports>
+                <!-- Each port will have an internal UID (e.g., id='1')
+                versus the actual slot port reported by the network element
+                This will make the structure more flexible for other technologies
+                in the future. -->
+                <port id='1'>
+                    <slotport>1/1</slotport>
+                    <operationalstatus>up</operationalstatus>
+                    <!-- Indicate if the slotport has an SFP adapter-->
+                    <sfp>1000Base-T</sfp>
+                    <!-- The interface MAC shows up in mac-addy-tables as well as the chassis MAC -->
+                    <mac>e8:e7:32:a3:06:de</mac>
+                    <autonegotiate>Enable</autonegotiate>
+                    <!-- ALU has a distinction between detected
+                    and configured port settings.-->
+                    <detected>
+                        <speed>1000</speed>
+                        <duplex>Full</duplex>
+                        <hybridtype>NA</hybridtype>
+                    </detected>
+                    <configured>
+                        <speed>1000</speed>
+                        <duplex>Full</duplex>
+                        <hybridtype>NA</hybridtype>                    
+                    </configured>
+                    <!-- Here we'll list out the data from the mac-address-table
+                    This indicates which MACS are detected as living down/upstream
+                    from the current NE on the current port.-->
+                    <associatedmacs>
+                        <mac>
+                            <vlan>2</vlan>
+                            <mac>00:30:ab:2b:96:29</mac>
+                            <type>learned</type>
+                        </mac>
+                        <mac>
+                            <vlan>2</vlan>
+                            <mac>00:30:ab:2b:98:c8</mac>
+                            <type>learned</type>
+                        </mac>
+                        <mac>
+                            <vlan>2</vlan>
+                            <mac>00:30:ab:2b:99:15</mac>
+                            <type>learned</type>
+                        </mac>
+                        <mac>
+                            <vlan>2</vlan>
+                            <mac>e8:e7:32:91:45:4a</mac>
+                            <type>learned</type>
+                        </mac>
+                        <mac>
+                            <vlan>2</vlan>
+                            <mac>e8:e7:32:91:45:54</mac>
+                            <type>learned</type>
+                        </mac>
+                    </associatedmacs>
+                </port>
+                <!-- Ports 1 and 2 have P10 switches connected to them-->
+                <port id='2'>
+                    <slotport>1/2</slotport>
+                    <operationalstatus>up</operationalstatus>
+                    <sfp>1000Base-T</sfp>
+                    <mac>e8:e7:32:a3:06:df</mac>
+                    <autonegotiate>Enable</autonegotiate>
+                    <detected>
+                        <speed>1000</speed>
+                        <duplex>Full</duplex>
+                        <hybridtype>NA</hybridtype>
+                    </detected>
+                    <configured>
+                        <speed>1000</speed>
+                        <duplex>Full</duplex>
+                        <hybridtype>NA</hybridtype>                    
+                    </configured>
+                    <associatedmacs>
+                        <mac>
+                            <vlan>2</vlan>
+                            <mac>00:30:ab:2b:96:83</mac>
+                            <type>learned</type>
+                        </mac>
+                        <mac>
+                            <vlan>2</vlan>
+                            <mac>00:30:ab:2b:96:df</mac>
+                            <type>learned</type>
+                        </mac>
+                        <mac>
+                            <vlan>2</vlan>
+                            <mac>e8:e7:32:91:5d:cc</mac>
+                            <type>learned</type>
+                        </mac>
+                        <mac>
+                            <vlan>2</vlan>
+                            <mac>e8:e7:32:91:5d:d6</mac>
+                            <type>learned</type>
+                        </mac>
+                    </associatedmacs>
+                </port>
+                <!-- In this example XML I've left out inactive ports-->
+                <!-- Now we'll look at an uplink port, notice the differences -->
+                <port id='23'>
+                    <slotport>1/23</slotport>
+                    <operationalstatus>up</operationalstatus>
+                    <sfp>Not Present</sfp>
+                    <mac>e8:e7:32:a3:06:f4</mac>
+                    <autonegotiate>Enable</autonegotiate>
+                    <detected>
+                        <speed>100</speed>
+                        <duplex>Half</duplex>
+                        <hybridtype>C</hybridtype>
+                    </detected>
+                    <configured>
+                        <speed>Auto</speed>
+                        <duplex>Full</duplex>
+                        <hybridtype>PF</hybridtype>                    
+                    </configured>
+                    <associatedmacs>
+                        <mac>
+                            <vlan>1</vlan>
+                            <mac>e8:e7:32:a3:06:f4</mac>
+                            <type>learned</type>
+                        </mac>
+                        <mac>
+                            <vlan>1</vlan>
+                            <mac>00:26:52:9c:60:83</mac>
+                            <type>learned</type>
+                        </mac>
+                    </associatedmacs>
+                </port>
+            </ports>
+            <!-- Now we'll look at vlans-->
+            <vlans>
+                <vlan id='1'>
+                    <name>external</name>
+                    <type>std</type>
+                    <adminstatus>on</adminstatus>
+                    <operstatus>on</operstatus>
+                    <ipstatus>on</ipstatus>
+                </vlan>
+                <vlan id='2'>
+                    <name>internal</name>
+                    <type>std</type>
+                    <adminstatus>on</adminstatus>
+                    <operstatus>on</operstatus>
+                    <ipstatus>on</ipstatus>
+                </vlan>
+            </vlans>
+            <!-- Now we'll look at installed modules. This 
+            will let us know what kind of hardware we're
+            working with. -->
+            <modules>
+                <module id='1'>
+                    <slot>CMM-1</slot>
+                    <status>UP</status>
+                    <partnumber>903175-90</partnumber>
+                    <mac>e8:e7:32:a3:06:dc</mac>
+                </module>
+                <module id='2'>
+                    <slot>NI-1</slot>
+                    <status>UP</status>
+                    <partnumber>903175-90</partnumber>
+                    <mac>e8:e7:32:a3:06:de</mac>
+                    <gbics>
+                        <gbic id='1'>
+                            <modelname>FINISAR CORP.</modelname>
+                            <partnumber>FCLF8521P2BTL-A5</partnumber>
+                            <serial>PQ96GY4</serial>
+                            <adminstatus>POWER ON</adminstatus>
+                            <operationalstatus>UP</operationalstatus>
+                            <!-- Here you can tell if the link is copper or fiber-->
+                            <laserwavelength>n/a</laserwavelength>
+                        </gbic>
+                        <gbic id='2'>
+                            <modelname>FINISAR CORP.</modelname>
+                            <partnumber>FCLF8521P2BTL-A5</partnumber>
+                            <serial>PQ96GVM</serial>
+                            <adminstatus>POWER ON</adminstatus>
+                            <operationalstatus>UP</operationalstatus>
+                            <laserwavelength>n/a</laserwavelength>
+                        </gbic>
+                    </gbics>
+                </module>
+            </modules>
+            <!-- Now we'll look at chassis to convey
+            model and features of the NE-->
+            <chassis>
+                <model>OS6450-U24</model>
+                <description>22 100/1000 BaseX + 2 Combo + 2 1/10G STK/UPLINK</description>
+                <adminstatus>POWER ON</adminstatus>
+                <operationalstatus>UP</operationalstatus>
+                <mac>e8:e7:32:a3:06:dc</mac>
+            </chassis>
+            <!-- Here we'll itemize the contents of the route table--> 
+            <routes>
+                <route id='1'>
+                    <destination>0.0.0.0/0</destination>
+                    <gateway>11.45.155.97</gateway>
+                    <interface>external</interface>
+                    <metric>1</metric>
+                    <type>STATIC</type>
+                </route>
+                <route id='2'>
+                    <destination>11.21.26.32/27</destination>
+                    <gateway>11.21.26.33</gateway>
+                    <interface>internal</interface>
+                    <metric>1</metric>
+                    <type>LOCAL</type>
+                </route>
+                <route id='3'>
+                    <destination>11.45.155.96/30</destination>
+                    <gateway>11.45.155.98</gateway>
+                    <interface>external</interface>
+                    <metric>1</metric>
+                    <type>LOCAL</type>
+                </route>
+            </routes>
+            <!-- Now we'll go through the interfaces. These would be
+            interfaces with an IP address assigned. For most of the SCR
+            SCS networks there is only a mgmt ip for the mgmt vlan 2 
+            and sometimes there is an active external interface. However,
+            most of the time the internal mgmt vlan is exposed to the 
+            internet anyway so I'm not sure why you would need an external-->
+            <interfaces>
+                <interface id='1'>
+                    <name>Loopback</name>
+                    <address>127.0.0.1</address>
+                    <subnetmask>255.0.0.0</subnetmask>
+                    <status>UP</status>
+                    <device>Loopback</device>
+                </interface>
+                <interface id='2'>
+                    <name>external</name>
+                    <address>11.45.155.98</address>
+                    <subnetmask>255.255.255.252</subnetmask>
+                    <status>UP</status>
+                    <device>vlan 1</device>
+                </interface>
+                <interface id='3'>
+                    <name>internal</name>
+                    <address>11.21.26.33</address>
+                    <subnetmask>255.255.255.224</subnetmask>
+                    <status>UP</status>
+                    <device>vlan 2</device>
+                </interface>
+            </interfaces>
+            <!-- The DHCP section will be helpful in determining 
+            pool size and lease times. Also, this can be used as a
+            supplement to the ARP and Mac-Address-Tables to get a 
+            population census-->
+            <dhcp>
+                <servername>11.21.26.33</servername>
+                <serverstatus>Enabled</serverstatus>
+                <numsubnetsmanaged>1</numsubnetsmanaged>
+                <numleases>5</numleases>
+                <lease id='1'>
+                    <ipaddr>11.21.26.36</ipaddr>
+                    <mac>00:30:ab:2b:99:15</mac>
+                    <!-- I noticed that all of these timestamps are
+                    usually wrong so the clocks on the SCR/SCS can't
+                    be trusted-->
+                    <timegranted>DEC 31 05:30:46 2001</timegranted>
+                    <timeexpires>JAN 01 05:30:46 2002</timeexpires>
+                    <type>DYNAMIC</type>
+                </lease>
+                <lease id='2'>
+                    <ipaddr>11.21.26.37</ipaddr>
+                    <mac>00:30:ab:2b:98:c8</mac>
+                    <timegranted>DEC 31 11:07:39 2001</timegranted>
+                    <timeexpires>JAN 01 11:07:39 2002</timeexpires>
+                    <type>DYNAMIC</type>
+                </lease>
+                <lease id='3'>
+                    <ipaddr>11.21.26.38</ipaddr>
+                    <mac>00:30:ab:2b:96:29</mac>
+                    <timegranted>DEC 31 02:56:54 2001</timegranted>
+                    <timeexpires>JAN 01 02:56:54 2002</timeexpires>
+                    <type>DYNAMIC</type>
+                </lease>
+                <lease id='4'>
+                    <ipaddr>11.21.26.39</ipaddr>
+                    <mac>00:30:ab:2b:96:df</mac>
+                    <timegranted>DEC 31 09:07:22 2001</timegranted>
+                    <timeexpires>JAN 01 05:25:34 2002</timeexpires>
+                    <type>DYNAMIC</type>
+                </lease>
+                <lease id='5'>
+                    <ipaddr>11.21.26.40</ipaddr>
+                    <mac>00:30:ab:2b:96:83</mac>
+                    <timegranted>DEC 31 09:07:22 2001</timegranted>
+                    <timeexpires>JAN 01 09:07:22 2002</timeexpires>
+                    <type>DYNAMIC</type>
+                </lease>
+            </dhcp>
+            <!-- here we'll dump the contents of the 
+            'show configuration snapshot' command. We may be able to use
+            this in the future to create an SCR/SCS configuration backup
+            archive-->
+            <configuration>
+                <text>
+                    "! Stack Manager :
+                    ! Chassis :
+                    system name AEB2-MAIN
+                    system daylight savings time disable
+                    ! Configuration:
+                    ! VLAN :
+                    vlan 1 enable name "external"
+                    vlan 2 enable name "internal"
+                    vlan 2 port default 1/1
+                    vlan 2 port default 1/2
+                    vlan 2 port default 1/3
+                    vlan 2 port default 1/4
+                    vlan 2 port default 1/5
+                    vlan 2 port default 1/6
+                    vlan 2 port default 1/7
+                    vlan 2 port default 1/8
+                    vlan 2 port default 1/9
+                    vlan 2 port default 1/10
+                    vlan 2 port default 1/11
+                    vlan 2 port default 1/12
+                    vlan 2 port default 1/13
+                    vlan 2 port default 1/14
+                    vlan 2 port default 1/15
+                    vlan 2 port default 1/16
+                    vlan 2 port default 1/17
+                    vlan 2 port default 1/18
+                    vlan 2 port default 1/19
+                    vlan 2 port default 1/20
+                    vlan 2 port default 1/21
+                    vlan 2 port default 1/22
+                    ! VLAN SL:
+                    ! IP :
+                    no ip service ftp
+                    ip service ssh
+                    no ip service telnet
+                    ip service udp-relay
+                    no ip service http
+                    ip service network-time
+                    no ip service snmp
+                    no ip service secure-http
+                    ip interface "external" address 11.45.155.98 mask 255.255.255.252 vlan 1 ifindex 1
+                    ip interface "internal" address 11.21.26.33 mask 255.255.255.224 vlan 2 ifindex 2
+                    ! IPMS :
+                    ! AAA :
+                    aaa authentication console "local"
+                    no aaa authentication telnet
+                    no aaa authentication ftp
+                    no aaa authentication http
+                    no aaa authentication snmp
+                    aaa authentication ssh "local"
+                    ! PARTM :
+                    ! 802.1x :
+                    ! QOS :
+                    ! Policy manager :
+                    ! Session manager :
+                    session timeout cli 1000
+                    session prompt default "AEB2-MAIN ->"
+                    ! SNMP :
+                    snmp security no security
+                    snmp authentication trap enable
+                    snmp trap to webview disable
+                    ! RIP :
+                    ! IPv6 :
+                    ! IP multicast :
+                    ! IPRM :
+                    ip static-route 0.0.0.0/0 gateway 11.45.155.97 metric 1
+                    ! RIPng :
+                    ! Health monitor :
+                    health threshold temperature 78
+                    ! Interface :
+                    ! Udld :
+                    ! Port Mapping :
+                    ! Link Aggregate :
+                    ! VLAN AGG:
+                    ! 802.1Q :
+                    ! Spanning tree :
+                    bridge mode 1x1
+                    ! Bridging :
+                    ! Bridging :
+                    ! Port mirroring :
+                    ! UDP Relay :
+                    ! System service :
+                    swlog console level info
+                    ! SSH :
+                    ! VRRP :
+                    ! Web :
+                    no ip http server
+                    ! AMAP :
+                    ! Lan  Power :
+                    ! NTP :
+                    ! RDP :
+                    ! VLAN STACKING:
+                    ! EFM-OAM :
+                    ! SAA :
+                    ! Loopback-detection :
+                    ! ERP :
+                    ! TEST-OAM :
+                    ! DHL :
+                    ! LLDP :
+                    ! DHCP Server :
+                    dhcp-server enable
+                    "
+                </text>
+            </configuration>
+        </type>
+    </ne>
+    <!-- The next network element is an ALU P10 switch.
+    its sections will be almost identical to the above U24
+    except it won't be handling DHCP. -->
+    <ne id='2' type='scs'>
+        <hostname>AEB2-P10-1</hostname>
+        <parents>
+            <ne id='1' type='scs'>
+                <!-- The port parameter of the parent NE is the source port on current NE -->
+                <port id='9' slotport='1/9'></port>
+            </ne>
+        </parents>
+        <children>
+            <ne id='4' type='metro'>
+                <port id='1' slotport='1/1'></port>
+            </ne>
+            <ne id='5' type='metro'>
+                <port id='2' slotport='1/2'></port>
+            </ne>
+            <ne id='6' type='metro'>
+                <port id='3' slotport='1/3'></port>
+            </ne>
+        </children>
+        <macs>
+            <mac>e8:e7:32:91:45:4a</mac>
+            <mac>e8:e7:32:91:45:54</mac>
+        </macs>
+        <ips>
+            <ip>
+                <address></address>
+                <mask></mask>
+            </ip>
+        </ips>
+        <pulltimestamp>20150217_122025 EST</pulltimestamp>
+        <type id='scs'>
+            <ports>
+                <!-- Ports 1,2,3 have metrocells connected -->
+                <port id='1'>
+                    <slotport>1/1</slotport>
+                    <operationalstatus>up</operationalstatus>
+                    <sfp>Not Present</sfp>
+                    <mac>e8:e7:32:91:45:4c</mac>
+                    <autonegotiate>Enable</autonegotiate>
+                    <detected>
+                        <speed>100</speed>
+                        <duplex>Full</duplex>
+                        <hybridtype>NA</hybridtype>
+                    </detected>
+                    <configured>
+                        <speed>Auto</speed>
+                        <duplex>Auto</duplex>
+                        <hybridtype>NA</hybridtype>                    
+                    </configured>
+                    <associatedmacs>
+                        <mac>
+                            <vlan>2</vlan>
+                            <mac>00:30:ab:2b:99:15</mac>
+                            <type>learned</type>
+                        </mac>
+                    </associatedmacs>
+                    <lanpower>
+                        <enabled>True</enabled>
+                        <status>ON</status>
+                        <maxwatts>31000</maxwatts>
+                        <currwatts>17900</currwatts>
+                        <priority>Low</priority>
+                    </lanpower>
+                </port>
+                <port id='2'>
+                    <slotport>1/2</slotport>
+                    <operationalstatus>up</operationalstatus>
+                    <sfp>Not Present</sfp>
+                    <mac>e8:e7:32:91:45:4d</mac>
+                    <autonegotiate>Enable</autonegotiate>
+                    <detected>
+                        <speed>100</speed>
+                        <duplex>Full</duplex>
+                        <hybridtype>NA</hybridtype>
+                    </detected>
+                    <configured>
+                        <speed>Auto</speed>
+                        <duplex>Auto</duplex>
+                        <hybridtype>NA</hybridtype>                    
+                    </configured>
+                    <associatedmacs>
+                        <mac>
+                            <vlan>2</vlan>
+                            <mac>00:30:ab:2b:98:c8</mac>
+                            <type>learned</type>
+                        </mac>
+                    </associatedmacs>
+                    <lanpower>
+                        <enabled>True</enabled>
+                        <status>ON</status>
+                        <maxwatts>31000</maxwatts>
+                        <currwatts>17400</currwatts>
+                        <priority>Low</priority>
+                    </lanpower>
+                </port>
+                <port id='3'>
+                    <slotport>1/3</slotport>
+                    <operationalstatus>up</operationalstatus>
+                    <sfp>Not Present</sfp>
+                    <mac>e8:e7:32:91:45:4e</mac>
+                    <autonegotiate>Enable</autonegotiate>
+                    <detected>
+                        <speed>100</speed>
+                        <duplex>Full</duplex>
+                        <hybridtype>NA</hybridtype>
+                    </detected>
+                    <configured>
+                        <speed>Auto</speed>
+                        <duplex>Auto</duplex>
+                        <hybridtype>NA</hybridtype>                    
+                    </configured>
+                    <associatedmacs>
+                        <mac>
+                            <vlan>2</vlan>
+                            <mac>00:30:ab:2b:96:29</mac>
+                            <type>learned</type>
+                        </mac>
+                    </associatedmacs>
+                    <lanpower>
+                        <enabled>True</enabled>
+                        <status>ON</status>
+                        <maxwatts>31000</maxwatts>
+                        <currwatts>17600</currwatts>
+                        <priority>Low</priority>
+                    </lanpower>
+                </port>
+                <!-- This would be the uplink port up to the 
+                U24-->
+                <port id='9'>
+                    <slotport>1/9</slotport>
+                    <operationalstatus>up</operationalstatus>
+                    <sfp>Not Preset</sfp>
+                    <mac>e8:e7:32:91:45:54</mac>
+                    <autonegotiate>Enable</autonegotiate>
+                    <detected>
+                        <speed>1000</speed>
+                        <duplex>Full</duplex>
+                        <hybridtype>C</hybridtype>
+                    </detected>
+                    <configured>
+                        <speed>Auto</speed>
+                        <duplex>Auto</duplex>
+                        <hybridtype>PF</hybridtype>                    
+                    </configured>
+                    <associatedmacs>
+                        <mac>
+                            <vlan>2</vlan>
+                            <mac>e8:e7:32:a3:06:dc</mac>
+                            <type>learned</type>
+                        </mac>
+                        <mac>
+                            <vlan>2</vlan>
+                            <mac>e8:e7:32:91:5d:cc</mac>
+                            <type>learned</type>
+                        </mac>
+                        <mac>
+                            <vlan>2</vlan>
+                            <mac>00:30:ab:2b:96:df</mac>
+                            <type>learned</type>
+                        </mac>
+                        <mac>
+                            <vlan>2</vlan>
+                            <mac>00:30:ab:2b:96:83</mac>
+                            <type>learned</type>
+                        </mac>
+                    </associatedmacs>
+                    <lanpower>
+                        <enabled>False</enabled>
+                        <status>OFF</status>
+                        <maxwatts>31000</maxwatts>
+                        <currwatts>0</currwatts>
+                        <priority>Low</priority>
+                    </lanpower>
+                </port>
+            </ports>
+            <vlans>
+                <vlan id='1'>
+                    <name>external</name>
+                    <type>std</type>
+                    <adminstatus>on</adminstatus>
+                    <operstatus>off</operstatus>
+                    <ipstatus>off</ipstatus>
+                </vlan>
+                <vlan id='2'>
+                    <name>internal</name>
+                    <type>std</type>
+                    <adminstatus>on</adminstatus>
+                    <operstatus>on</operstatus>
+                    <ipstatus>on</ipstatus>
+                </vlan>
+            </vlans>
+            <modules>
+                <module id='1'>
+                    <slot>CMM-1</slot>
+                    <status>UP</status>
+                    <partnumber>903175-90</partnumber>
+                    <mac>e8:e7:32:91:45:4a</mac>
+                </module>
+                <module id='2'>
+                    <slot>NI-1</slot>
+                    <status>UP</status>
+                    <partnumber>903175-90</partnumber>
+                    <mac>e8:e7:32:91:45:4c</mac>
+                    <gbics></gbics>
+                </module>
+            </modules>
+            <chassis>
+                <model>OS6450-P10</model>
+                <description>8 POE 10/100/1000 + 2 Combo + 2 5G STK/UPLINK</description>
+                <adminstatus>POWER ON</adminstatus>
+                <operationalstatus>UP</operationalstatus>
+                <mac>e8:e7:32:91:45:4a</mac>
+            </chassis>
+            <routes>
+                <route id='1'>
+                    <destination>0.0.0.0/0</destination>
+                    <gateway>11.21.26.33</gateway>
+                    <interface>external</interface>
+                    <metric>1</metric>
+                    <type>STATIC</type>
+                </route>
+                <route id='2'>
+                    <destination>11.21.26.32/27</destination>
+                    <gateway>11.21.26.34</gateway>
+                    <interface>internal</interface>
+                    <metric>1</metric>
+                    <type>LOCAL</type>
+                </route>
+            </routes>
+            <interfaces>
+                <interface id='1'>
+                    <name>Loopback</name>
+                    <address>127.0.0.1</address>
+                    <subnetmask>255.0.0.0</subnetmask>
+                    <status>UP</status>
+                    <device>Loopback</device>
+                </interface>
+                <interface id='2'>
+                    <name>internal</name>
+                    <address>11.21.26.34</address>
+                    <subnetmask>255.255.255.224</subnetmask>
+                    <status>UP</status>
+                    <device>vlan 2</device>
+                </interface>
+            </interfaces>
+            <dhcp>
+                <servername></servername>
+                <serverstatus>False</serverstatus>
+                <numsubnetsmanaged></numsubnetsmanaged>
+                <numleases></numleases>
+            </dhcp>
+            <configuration>
+                <text>
+                    "! Stack Manager :
+                    ! Chassis :
+                    system name AEB2-P10-1
+                    system daylight savings time disable
+                    ! Configuration:
+                    ! VLAN :
+                    vlan 1 enable name "external"
+                    vlan 2 enable name "internal"
+                    vlan 2 port default 1/1
+                    vlan 2 port default 1/2
+                    vlan 2 port default 1/3
+                    vlan 2 port default 1/4
+                    vlan 2 port default 1/5
+                    vlan 2 port default 1/6
+                    vlan 2 port default 1/7
+                    vlan 2 port default 1/8
+                    vlan 2 port default 1/9
+                    vlan 2 port default 1/10
+                    ! VLAN SL:
+                    ! IP :
+                    no ip service ftp
+                    ip service ssh
+                    no ip service telnet
+                    ip service udp-relay
+                    no ip service http
+                    ip service network-time
+                    no ip service snmp
+                    no ip service secure-http
+                    arp filter 11.21.26.33
+                    ip interface "internal" address 11.21.26.34 mask 255.255.255.224 vlan 2 ifindex 1
+                    ! IPMS :
+                    ! AAA :
+                    aaa authentication console "local"
+                    no aaa authentication telnet
+                    no aaa authentication ftp
+                    no aaa authentication http
+                    no aaa authentication snmp
+                    aaa authentication ssh "local"
+                    ! PARTM :
+                    ! 802.1x :
+                    ! QOS :
+                    ! Policy manager :
+                    ! Session manager :
+                    session timeout cli 1000
+                    session prompt default "AEB2-P10-1 ->"
+                    ! SNMP :
+                    snmp security no security
+                    snmp authentication trap enable
+                    snmp trap to webview disable
+                    ! RIP :
+                    ! IPv6 :
+                    ! IP multicast :
+                    ! IPRM :
+                    ip static-route 0.0.0.0/0 gateway 11.21.26.33 metric 1
+                    ! RIPng :
+                    ! Health monitor :
+                    ! Interface :
+                    ! Udld :
+                    ! Port Mapping :
+                    ! Link Aggregate :
+                    ! VLAN AGG:
+                    ! 802.1Q :
+                    ! Spanning tree :
+                    bridge mode 1x1
+                    ! Bridging :
+                    ! Bridging :
+                    ! Port mirroring :
+                    ! UDP Relay :
+                    ! System service :
+                    swlog console level info
+                    ! SSH :
+                    ! VRRP :
+                    ! Web :
+                    no ip http server
+                    ! AMAP :
+                    ! Lan  Power :
+                    lanpower stop 1/5
+                    lanpower stop 1/6
+                    lanpower stop 1/7
+                    lanpower stop 1/8
+                    lanpower start 1
+                    ! NTP :
+                    ! RDP :
+                    ! VLAN STACKING:
+                    ! EFM-OAM :
+                    ! SAA :
+                    ! Loopback-detection :
+                    ! ERP :
+                    ! TEST-OAM :
+                    ! DHL :
+                    ! LLDP :
+                    ! DHCP Server :
+                    "
+                </text>
+            </configuration>
+        </type>
+    </ne>
+    <ne id='3' type='scs'>
+        <hostname>AEB2-P10-2</hostname>
+        <parents>
+            <ne id='1' type='scs'>
+                <port id='9' slotport='1/9'></port>
+            </ne>
+        </parents>
+        <children>
+            <ne id='7' type='metro'>
+                <port id='1' slotport='1/1'></port>
+            </ne>
+            <ne id='8' type='metro'>
+                <port id='3' slotport='1/3'></port>
+            </ne>
+        </children>
+        <macs>
+            <mac>e8:e7:32:91:5d:cc</mac>
+            <mac>e8:e7:32:91:5d:d6</mac>
+        </macs>
+        <ips>
+            <ip>
+                <address></address>
+                <mask></mask>
+            </ip>
+        </ips>
+        <pulltimestamp>20150217_122025 EST</pulltimestamp>
+        <type id='scs'>
+            <ports>
+                <!-- Ports 1 and 2 have metrocells connected-->
+                <port id='1'>
+                    <slotport>1/1</slotport>
+                    <operationalstatus>up</operationalstatus>
+                    <sfp>Not Present</sfp>
+                    <mac>e8:e7:32:91:5d:ce</mac>
+                    <autonegotiate>Enable</autonegotiate>
+                    <detected>
+                        <speed>100</speed>
+                        <duplex>Full</duplex>
+                        <hybridtype>NA</hybridtype>
+                    </detected>
+                    <configured>
+                        <speed>Auto</speed>
+                        <duplex>Auto</duplex>
+                        <hybridtype>NA</hybridtype>                    
+                    </configured>
+                    <associatedmacs>
+                        <mac>
+                            <vlan>2</vlan>
+                            <mac>00:30:ab:2b:96:83</mac>
+                            <type>learned</type>
+                        </mac>
+                    </associatedmacs>
+                    <lanpower>
+                        <enabled>True</enabled>
+                        <status>ON</status>
+                        <maxwatts>31000</maxwatts>
+                        <currwatts>18200</currwatts>
+                        <priority>Low</priority>
+                    </lanpower>
+                </port>
+                <port id='3'>
+                    <slotport>1/3</slotport>
+                    <operationalstatus>up</operationalstatus>
+                    <sfp>Not Present</sfp>
+                    <mac>e8:e7:32:91:5d:cf</mac>
+                    <autonegotiate>Enable</autonegotiate>
+                    <detected>
+                        <speed>100</speed>
+                        <duplex>Full</duplex>
+                        <hybridtype>NA</hybridtype>
+                    </detected>
+                    <configured>
+                        <speed>Auto</speed>
+                        <duplex>Auto</duplex>
+                        <hybridtype>NA</hybridtype>                    
+                    </configured>
+                    <associatedmacs>
+                        <mac>
+                            <vlan>2</vlan>
+                            <mac>00:30:ab:2b:96:df</mac>
+                            <type>learned</type>
+                        </mac>
+                    </associatedmacs>
+                    <lanpower>
+                        <enabled>True</enabled>
+                        <status>ON</status>
+                        <maxwatts>31000</maxwatts>
+                        <currwatts>17400</currwatts>
+                        <priority>Low</priority>
+                    </lanpower>
+                </port>
+                <!-- Port 9 is the uplink to the U24-->
+                <port id='9'>
+                    <slotport>1/9</slotport>
+                    <operationalstatus>up</operationalstatus>
+                    <sfp>Not Preset</sfp>
+                    <mac>e8:e7:32:91:5d:d6</mac>
+                    <autonegotiate>Enable</autonegotiate>
+                    <detected>
+                        <speed>1000</speed>
+                        <duplex>Full</duplex>
+                        <hybridtype>C</hybridtype>
+                    </detected>
+                    <configured>
+                        <speed>Auto</speed>
+                        <duplex>Auto</duplex>
+                        <hybridtype>PF</hybridtype>                    
+                    </configured>
+                    <associatedmacs>
+                        <mac>
+                            <vlan>2</vlan>
+                            <mac>e8:e7:32:91:45:4a</mac>
+                            <type>learned</type>
+                        </mac>
+                        <mac>
+                            <vlan>2</vlan>
+                            <mac>e8:e7:32:a3:06:dc</mac>
+                            <type>learned</type>
+                        </mac>
+                        <mac>
+                            <vlan>2</vlan>
+                            <mac>e8:e7:32:a3:06:df</mac>
+                            <type>learned</type>
+                        </mac>
+                    </associatedmacs>
+                    <lanpower>
+                        <enabled>False</enabled>
+                        <status>OFF</status>
+                        <maxwatts>31000</maxwatts>
+                        <currwatts>0</currwatts>
+                        <priority>Low</priority>
+                    </lanpower>
+                </port>
+            </ports>
+            <vlans>
+                <vlan id='1'>
+                    <name>external</name>
+                    <type>std</type>
+                    <adminstatus>on</adminstatus>
+                    <operstatus>off</operstatus>
+                    <ipstatus>off</ipstatus>
+                </vlan>
+                <vlan id='2'>
+                    <name>internal</name>
+                    <type>std</type>
+                    <adminstatus>on</adminstatus>
+                    <operstatus>on</operstatus>
+                    <ipstatus>on</ipstatus>
+                </vlan>
+            </vlans>
+            <modules>
+                <module id='1'>
+                    <slot>CMM-1</slot>
+                    <status>UP</status>
+                    <partnumber>903175-90</partnumber>
+                    <mac>e8:e7:32:91:45:4a</mac>
+                </module>
+                <module id='2'>
+                    <slot>NI-1</slot>
+                    <status>UP</status>
+                    <partnumber>903175-90</partnumber>
+                    <mac>e8:e7:32:91:45:4c</mac>
+                    <gbics></gbics>
+                </module>
+            </modules>
+            <chassis>
+                <model>OS6450-P10</model>
+                <description>8 POE 10/100/1000 + 2 Combo + 2 5G STK/UPLINK</description>
+                <adminstatus>POWER ON</adminstatus>
+                <operationalstatus>UP</operationalstatus>
+                <mac>e8:e7:32:91:5d:cc</mac>
+            </chassis>
+            <routes>
+                <route id='1'>
+                    <destination>0.0.0.0/0</destination>
+                    <gateway>11.21.26.33</gateway>
+                    <interface>external</interface>
+                    <metric>1</metric>
+                    <type>STATIC</type>
+                </route>
+                <route id='2'>
+                    <destination>11.21.26.32/27</destination>
+                    <gateway>11.21.26.35</gateway>
+                    <interface>internal</interface>
+                    <metric>1</metric>
+                    <type>LOCAL</type>
+                </route>
+            </routes>
+            <interfaces>
+                <interface id='1'>
+                    <name>Loopback</name>
+                    <address>127.0.0.1</address>
+                    <subnetmask>255.0.0.0</subnetmask>
+                    <status>UP</status>
+                    <device>Loopback</device>
+                </interface>
+                <interface id='2'>
+                    <name>internal</name>
+                    <address>11.21.26.34</address>
+                    <subnetmask>255.255.255.224</subnetmask>
+                    <status>UP</status>
+                    <device>vlan 2</device>
+                </interface>
+            </interfaces>
+            <dhcp>
+                <servername></servername>
+                <serverstatus>False</serverstatus>
+                <numsubnetsmanaged></numsubnetsmanaged>
+                <numleases></numleases>
+            </dhcp>
+            <configuration>
+                <text>
+                    "! Stack Manager :
+                    ! Chassis :
+                    system name AEB2-P10-2
+                    system daylight savings time disable
+                    ! Configuration:
+                    ! VLAN :
+                    vlan 1 enable name "external"
+                    vlan 2 enable name "internal"
+                    vlan 2 port default 1/1
+                    vlan 2 port default 1/2
+                    vlan 2 port default 1/3
+                    vlan 2 port default 1/4
+                    vlan 2 port default 1/5
+                    vlan 2 port default 1/6
+                    vlan 2 port default 1/7
+                    vlan 2 port default 1/8
+                    vlan 2 port default 1/9
+                    vlan 2 port default 1/10
+                    ! VLAN SL:
+                    ! IP :
+                    no ip service ftp
+                    ip service ssh
+                    no ip service telnet
+                    ip service udp-relay
+                    no ip service http
+                    ip service network-time
+                    no ip service snmp
+                    no ip service secure-http
+                    ip interface "internal" address 11.21.26.35 mask 255.255.255.224 vlan 2 ifindex 1
+                    ! IPMS :
+                    ! AAA :
+                    aaa authentication console "local"
+                    no aaa authentication telnet
+                    no aaa authentication ftp
+                    no aaa authentication http
+                    no aaa authentication snmp
+                    aaa authentication ssh "local"
+                    ! PARTM :
+                    ! 802.1x :
+                    ! QOS :
+                    ! Policy manager :
+                    ! Session manager :
+                    session timeout cli 1000
+                    session prompt default "AEB2-P10-2 ->"
+                    ! SNMP :
+                    snmp security no security
+                    snmp authentication trap enable
+                    snmp trap to webview disable
+                    ! RIP :
+                    ! IPv6 :
+                    ! IP multicast :
+                    ! IPRM :
+                    ip static-route 0.0.0.0/0 gateway 11.21.26.33 metric 1
+                    ! RIPng :
+                    ! Health monitor :
+                    ! Interface :
+                    ! Udld :
+                    ! Port Mapping :
+                    ! Link Aggregate :
+                    ! VLAN AGG:
+                    ! 802.1Q :
+                    ! Spanning tree :
+                    bridge mode 1x1
+                    ! Bridging :
+                    ! Bridging :
+                    ! Port mirroring :
+                    ! UDP Relay :
+                    ! System service :
+                    swlog console level info
+                    ! SSH :
+                    ! VRRP :
+                    ! Web :
+                    no ip http server
+                    ! AMAP :
+                    ! Lan  Power :
+                    lanpower stop 1/5
+                    lanpower stop 1/6
+                    lanpower stop 1/7
+                    lanpower stop 1/8
+                    lanpower start 1
+                    ! NTP :
+                    ! RDP :
+                    ! VLAN STACKING:
+                    ! EFM-OAM :
+                    ! SAA :
+                    ! Loopback-detection :
+                    ! ERP :
+                    ! TEST-OAM :
+                    ! DHL :
+                    ! LLDP :
+                    ! DHCP Server :
+                    "
+                </text>
+            </configuration>
+        </type>
+    </ne>
+    <ne id='4' type='metro'>
+        <hostname></hostname>
+        <parents>
+            <ne id='2' type='scs'></ne>
+        </parents>
+        <children>
+        </children>
+        <macs>
+            <mac>00:30:ab:2b:99:15</mac>
+        </macs>
+        <ips>
+            <ip>
+                <address></address>
+                <mask></mask>
+            </ip>
+        </ips>
+        <pulltimestamp>20150217_122025 EST</pulltimestamp>
+        <type id='metro'>
+        </type>
+    </ne>
+    <ne id='5' type='metro'>
+        <hostname></hostname>
+        <parents>
+            <ne id='2' type='scs'></ne>
+        </parents>
+        <children>
+        </children>
+        <macs>
+            <mac>00:30:ab:2b:98:c8</mac>
+        </macs>
+        <ips>
+            <ip>
+                <address></address>
+                <mask></mask>
+            </ip>
+        </ips>
+        <pulltimestamp>20150217_122025 EST</pulltimestamp>
+        <type id='metro'>
+        </type>
+    </ne>
+    <ne id='6' type='metro'>
+        <hostname></hostname>
+        <parents>
+            <ne id='2' type='scs'></ne>
+        </parents>
+        <children>
+        </children>
+        <macs>
+            <mac>00:30:ab:2b:96:29</mac>
+        </macs>
+        <ips>
+            <ip>
+                <address></address>
+                <mask></mask>
+            </ip>
+        </ips>
+        <pulltimestamp>20150217_122025 EST</pulltimestamp>
+        <type id='metro'>
+        </type>
+    </ne>
+    <ne id='7' type='metro'>
+        <hostname></hostname>
+        <parents>
+            <ne id='3' type='scs'></ne>
+        </parents>
+        <children>
+        </children>
+        <mac>
+            <mac>00:30:ab:2b:96:83</mac>
+        </mac>
+        <ips>
+            <ip>
+                <address></address>
+                <mask></mask>
+            </ip>
+        </ips>
+        <pulltimestamp>20150217_122025 EST</pulltimestamp>
+        <type id='metro'>
+        </type>
+    </ne>
+    <ne id='8' type='metro'>
+        <hostname></hostname>
+        <parents>
+            <ne id='3' type='scs'></ne>
+        </parents>
+        <children>
+        </children>
+        <macs>
+            <mac>00:30:ab:2b:96:df</mac>
+        </macs>
+        <ips>
+            <ip>
+                <address></address>
+                <mask></mask>
+            </ip>
+        </ips>
+        <pulltimestamp>20150217_122025 EST</pulltimestamp>
+        <type id='metro'>
+        </type>
+    </ne>
+    <messagelog>
+        <event>
+            <linetext></linetext>
+        </event>
+    </messagelog>
+</root>
+
+
+
+<!--
+    <ne id='' type=''>
+        <hostname></hostname>
+        <parents>
+            <ne id='2' type='scs'></ne>
+        </parents>
+        <children>
+        </children>
+        <mac></mac>
+        <ips>
+            <ip>
+                <address></address>
+                <mask></mask>
+            </ip>
+        </ips>
+        <pulltimestamp></pulltimestamp>
+    </ne>
+-->

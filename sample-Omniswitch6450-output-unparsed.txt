@@ -1,0 +1,1225 @@
+spawn ssh admin@11.21.254.241
+Warning Notice
+This system is restricted solely to BigCompany authorized users for legitimate business purposes only. The actual or attempted unauthorized access, use, or modification of this system is strictly prohibited by BigCompany. Unauthorized users are subject to Company disciplinary proceedings and/or criminal and civil penalties under state, federal, or other applicable domestic and foreign laws. The use of this system may be monitored and recorded for administrative and security reasons. Anyone accessing this system expressly consents to such monitoring and is advised that if monitoring reveals possible evidence of criminal activity, BigCompany may provide the evidence of such activity to law enforcement officials. All users must comply with BigCompany company policies regarding the protection of BigCompany information assets.
+admin's password for keyboard-interactive method: 
+
+ 
+  
+Welcome to the Alcatel-Lucent OmniSwitch 6450
+Software Version 6.6.4.197.R01 Service Release, August 13, 2013. 
+
+Copyright(c), 1994-2013 Alcatel-Lucent. All Rights reserved.
+
+OmniSwitch(TM) is a trademark of Alcatel-Lucent registered
+in the United States Patent and Trademark Office.
+  
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show lanpower 1
+ERROR: Invalid Slot Number 1
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show interfaces
+ Slot/Port  1/1  :
+  Operational Status     : up,
+  Last Time Link Changed : FRI JAN 10 14:02:28 ,
+  Number of Status Change: 3,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : GBIC_LX,
+  MAC address            : e8:e7:32:98:67:3e,
+  BandWidth (Megabits)   :     1000,  		Duplex           : Full,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :          32725374475, Unicast Frames :            212210573,
+  Broadcast Frames:                63800, M-cast Frames  :              1381915,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :          85378096195, Unicast Frames :            221227287,
+  Broadcast Frames:              2701072, M-cast Frames  :             22110559,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/2  :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:3f,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/3  :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:40,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/4  :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:41,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/5  :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:42,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/6  :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:43,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/7  :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:44,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/8  :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:45,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/9  :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:46,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/10 :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:47,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/11 :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:48,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/12 :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:49,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/13 :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:4a,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/14 :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:4b,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/15 :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:4c,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/16 :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:4d,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/17 :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:4e,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/18 :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:4f,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/19 :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:50,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/20 :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:51,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/21 :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:52,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/22 :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:53,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/23 :
+  Operational Status     : up,
+  Last Time Link Changed : FRI JAN 10 14:02:19 ,
+  Number of Status Change: 1,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:54,
+  BandWidth (Megabits)   :     1000,  		Duplex           : Full,
+  Autonegotiation        :   1  [ 1000-F 100-F 100-H 10-F 10-H ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :          96463193157, Unicast Frames :            515332796,
+  Broadcast Frames:               178513, M-cast Frames  :             22110463,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :         454544488833, Unicast Frames :            635455731,
+  Broadcast Frames:              2586368, M-cast Frames  :              1381919,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/24 :
+  Operational Status     : up,
+  Last Time Link Changed : FRI JAN 10 14:02:19 ,
+  Number of Status Change: 1,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:55,
+  BandWidth (Megabits)   :      100,  		Duplex           : Half,
+  Autonegotiation        :   1  [ 1000-F 100-F 100-H 10-F 10-H ],
+  Long Frame Size(Bytes) : 1553,
+  Rx              :
+  Bytes Received  :         538704544827, Unicast Frames :            860561302,
+  Broadcast Frames:                    5, M-cast Frames  :               256842,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :         129322136101, Unicast Frames :            729502133,
+  Broadcast Frames:               216394, M-cast Frames  :             22110563,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:             17238677,
+  Error Frames    :             17238677
+ Slot/Port  1/25 :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:56,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+ Slot/Port  1/26 :
+  Operational Status     : down,
+  Last Time Link Changed : FRI JAN 10 14:02:00 ,
+  Number of Status Change: 0,
+  Type                   : Ethernet,
+  SFP/SFP+/XFP           : Not Present,
+  MAC address            : e8:e7:32:98:67:57,
+  BandWidth (Megabits)   :     -   ,  		Duplex           : -,
+  Autonegotiation        :   1  [ 1000-F                       ],
+  Long Frame Size(Bytes) : 9216,
+  Rx              :
+  Bytes Received  :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Error Frames   :                    0,
+  CRC Error Frames:                    0, Alignments Err :                    0,
+  Tx              :
+  Bytes Xmitted   :                    0, Unicast Frames :                    0,
+  Broadcast Frames:                    0, M-cast Frames  :                    0,
+  UnderSize Frames:                    0, OverSize Frames:                    0,
+  Lost Frames     :                    0, Collided Frames:                    0,
+  Error Frames    :                    0
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show interfaces port
+Legends: WTR - Wait To Restore
+         #   - WTR Timer is Running & Port is in wait-to-restore state
+         *   - Permanent Shutdown
+
+Slot/    Admin     Link    Violations  Recovery   Recovery      WTR            Alias
+Port     Status   Status                 Time       Max        (sec)
+------+----------+---------+----------+----------+----------+----------+-----------------------------------------
+  1/1    enable      up        none           300         10          0 ""
+  1/2    enable      down      none           300         10          0 ""
+  1/3    enable      down      none           300         10          0 ""
+  1/4    enable      down      none           300         10          0 ""
+  1/5    enable      down      none           300         10          0 ""
+  1/6    enable      down      none           300         10          0 ""
+  1/7    enable      down      none           300         10          0 ""
+  1/8    enable      down      none           300         10          0 ""
+  1/9    enable      down      none           300         10          0 ""
+  1/10   enable      down      none           300         10          0 ""
+  1/11   enable      down      none           300         10          0 ""
+  1/12   enable      down      none           300         10          0 ""
+  1/13   enable      down      none           300         10          0 ""
+  1/14   enable      down      none           300         10          0 ""
+  1/15   enable      down      none           300         10          0 ""
+  1/16   enable      down      none           300         10          0 ""
+  1/17   enable      down      none           300         10          0 ""
+  1/18   enable      down      none           300         10          0 ""
+  1/19   enable      down      none           300         10          0 ""
+  1/20   enable      down      none           300         10          0 ""
+  1/21   enable      down      none           300         10          0 ""
+  1/22   enable      down      none           300         10          0 ""
+  1/23   enable      up        none           300         10          0 ""
+  1/24   enable      up        none           300         10          0 ""
+  1/25   enable      down      none           300         10          0 ""
+  1/26   enable      down      none           300         10          0 ""
+  1/27   enable      down      none             0          0          0 ""
+  1/28   enable      down      none             0          0          0 ""
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show interfaces status
+                       DETECTED           CONFIGURED
+Slot/ AutoNego  Speed Duplex Hybrid  Speed   Duplex Hybrid  Trap
+Port           (Mbps)         Type   (Mbps)         Mode   LinkUpDown
+-----+--------+------+------+------+--------+------+------+------
+ 1/1   Enable   1000   Full    NA       1000  Full    NA      -  
+ 1/2   Enable    -      -      -        1000  Full    NA      -  
+ 1/3   Enable    -      -      -        1000  Full    NA      -  
+ 1/4   Enable    -      -      -        1000  Full    NA      -  
+ 1/5   Enable    -      -      -        1000  Full    NA      -  
+ 1/6   Enable    -      -      -        1000  Full    NA      -  
+ 1/7   Enable    -      -      -        1000  Full    NA      -  
+ 1/8   Enable    -      -      -        1000  Full    NA      -  
+ 1/9   Enable    -      -      -        1000  Full    NA      -  
+ 1/10  Enable    -      -      -        1000  Full    NA      -  
+ 1/11  Enable    -      -      -        1000  Full    NA      -  
+ 1/12  Enable    -      -      -        1000  Full    NA      -  
+ 1/13  Enable    -      -      -        1000  Full    NA      -  
+ 1/14  Enable    -      -      -        1000  Full    NA      -  
+ 1/15  Enable    -      -      -        1000  Full    NA      -  
+ 1/16  Enable    -      -      -        1000  Full    NA      -  
+ 1/17  Enable    -      -      -        1000  Full    NA      -  
+ 1/18  Enable    -      -      -        1000  Full    NA      -  
+ 1/19  Enable    -      -      -        1000  Full    NA      -  
+ 1/20  Enable    -      -      -        1000  Full    NA      -  
+ 1/21  Enable    -      -      -        1000  Full    NA      -  
+ 1/22  Enable    -      -      -        1000  Full    NA      -  
+ 1/23  Enable    -      -      -        1000  Full    PF      -  
+ 1/23  Enable   1000   Full    C       Auto   Auto    PF      -  
+ 1/24  Enable    -      -      -        1000  Full    PF      -  
+ 1/24  Enable    100   Half    C       Auto   Auto    PF      -  
+ 1/25  Enable    -      -      -        1000  Full    NA      -  
+ 1/26  Enable    -      -      -        1000  Full    NA      -  
+
+FF - ForcedFiber PF - PreferredFiber  F - Fiber
+FC - ForcedCopper PC - PreferredCopper C - Copper
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show hardware info
+CPU Type                          : Marvell Feroceon,
+Flash Manufacturer                : Micron Technology, Inc.,
+Flash size                        : 134217728 bytes (128 MB),
+RAM Manufacturer                  : Nanya Technology,
+RAM size                          : 268435456 bytes (256 MB),
+Miniboot Version                  : 6.6.3.259.R01,
+Product ID Register               : 07
+Hardware Revision Register        : 30
+FPGA Revision Register            : 6
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show microcode
+   Package           Release       Size     Description
+-----------------+---------------+--------+-----------------------------------
+KFbase.img        6.6.4.197.R01   16166421 Alcatel-Lucent Base Software
+KFos.img          6.6.4.197.R01    2585379 Alcatel-Lucent OS
+KFeni.img         6.6.4.197.R01    5210127 Alcatel-Lucent NI software
+KFsecu.img        6.6.4.197.R01     602353 Alcatel-Lucent Security Management
+
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show temperature
+
+Temperature for chassis 1
+  Hardware Board Temperature (deg C)               = 51,
+  Temperature Upper Threshold Range (deg C)        = 0 to 61,
+  Temperature Upper Threshold (deg C)              = 54,
+  Temperature Status                               = UNDER THRESHOLD,
+  Temperature Danger Threshold (deg C)             = 61
+
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show system
+System:
+  Description:  Alcatel-Lucent OS6450-U24 6.6.4.197.R01 Service Release, August 13, 2013.,
+  Object ID:    1.3.6.1.4.1.6486.800.1.1.2.1.12.1.7,
+  Up Time:      479 days 19 hours 57 minutes and 5 seconds,
+  Contact:      Alcatel-Lucent, http://alcatel-lucent.com/wps/portal/enterprise,
+  Name:         BellBoy_AL_Main,
+  Location:     Unknown,
+  Services:     72,
+  Date & Time:  TUE MAY 05 2015  09:57:25 (UTC)
+
+Flash Space:
+    Primary CMM:
+      Available (bytes):  62842880,
+      Comments         :  None
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show running directory
+                          ^
+ERROR: Invalid entry: "running"
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show ni
+Module in slot 1
+  Model Name:                    OS6450-U24,
+  Description:                   22 100/1000 BaseX + 2 Combo + 2 1/10G STK/UPLINK,
+  Part Number:                   903175-90,
+  Hardware Revision:             05,
+  Serial Number:                 P4562145,
+  Manufacture Date:              AUG 01 2013,
+  Firmware Version:              ,
+  Admin Status:                  POWER ON,
+  Operational Status:            UP,
+  Power Consumption:             59,
+  Power Control Checksum:        0xec94,
+  CPU Model Type   :             ARM926 (Rev 1),
+  MAC Address:                   e8:e7:32:98:67:3e,
+  ASIC - Physical 1:             MV88F6281 Rev 2,
+  FPGA - Physical 1:             006/00,
+  UBOOT Version :                n/a,
+  UBOOT-miniboot Version :       6.6.3.259.R01,
+  POE SW Version :               n/a
+  GBIC  1
+        Model Name:                    SOURCEPHOTONICS ,
+        Description:                   SOURCEPHOTONICS ,
+        Part Number:                   SPGBLXIDFNAL    ,
+        Hardware Revision:             10  ,
+        Serial Number:                 D8S2005008      ,
+        Manufacture Date:              130729  ,
+        Laser Wave Length:             1310nm,
+        Admin Status:                  POWER ON,
+        Operational Status:            UP
+        DDM Capable:                   Yes,
+
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show module
+                                    HW    Mfg
+Slot     Part-Number     Serial #   Rev   Date      Model Name
+-------+--------------+------------+---+-----------+--------------------------------
+CMM-1    903175-90      P3182183     05  AUG 01 2013  OS6450-U24                      
+
+NI-1    903175-90      P3182183     05  AUG 01 2013  OS6450-U24                      
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show module status
+       Operational                Firmware
+Slot     Status      Admin-Status   Rev           MAC
+------+-------------+------------+---------+-----------------
+CMM-1    UP            POWER ON      N/A     e8:e7:32:98:67:3c  
+
+NI-1     UP            POWER ON      N/A     e8:e7:32:98:67:3e  
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show module long
+CMM in slot 1
+  Model Name:                    OS6450-U24,
+  Description:                   CMM,
+  Part Number:                   903175-90,
+  Hardware Revision:             05,
+  Serial Number:                 P3182183,
+  Manufacture Date:              AUG 01 2013,
+  Firmware Version:              n/a,
+  Admin Status:                  POWER ON,
+  Operational Status:            UP,
+  Power Consumption:             59,
+  Power Control Checksum:        0xec94,
+  CPU Model Type   :             MV88F6281 Rev 2,
+  MAC Address:                   e8:e7:32:98:67:3c,
+
+
+Module in slot 1
+  Model Name:                    OS6450-U24,
+  Description:                   22 100/1000 BaseX + 2 Combo + 2 1/10G STK/UPLINK,
+  Part Number:                   903175-90,
+  Hardware Revision:             05,
+  Serial Number:                 P3182183,
+  Manufacture Date:              AUG 01 2013,
+  Firmware Version:              ,
+  Admin Status:                  POWER ON,
+  Operational Status:            UP,
+  Power Consumption:             59,
+  Power Control Checksum:        0xec94,
+  CPU Model Type   :             ARM926 (Rev 1),
+  MAC Address:                   e8:e7:32:98:67:3e,
+  ASIC - Physical 1:             MV88F6281 Rev 2,
+  FPGA - Physical 1:             006/00,
+  UBOOT Version :                n/a,
+  UBOOT-miniboot Version :       6.6.3.259.R01,
+  POE SW Version :               n/a
+  GBIC  1
+        Model Name:                    SOURCEPHOTONICS ,
+        Description:                   SOURCEPHOTONICS ,
+        Part Number:                   SPGBLXIDFNAL    ,
+        Hardware Revision:             10  ,
+        Serial Number:                 D8S2005008      ,
+        Manufacture Date:              130729  ,
+        Laser Wave Length:             1310nm,
+        Admin Status:                  POWER ON,
+        Operational Status:            UP
+        DDM Capable:                   Yes,
+
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show fan
+Chassis Fan  Status
+-------+---+-----------
+   1     1   Running
+   1     2   Running
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show cmm
+CMM in slot 1
+  Model Name:                    OS6450-U24,
+  Description:                   CMM,
+  Part Number:                   903175-90,
+  Hardware Revision:             05,
+  Serial Number:                 P3182183,
+  Manufacture Date:              AUG 01 2013,
+  Firmware Version:              n/a,
+  Admin Status:                  POWER ON,
+  Operational Status:            UP,
+  Power Consumption:             59,
+  Power Control Checksum:        0xec94,
+  CPU Model Type   :             MV88F6281 Rev 2,
+  MAC Address:                   e8:e7:32:98:67:3c,
+
+
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show chassis
+
+Chassis 1
+  Model Name:                    OS6450-U24,
+  Description:                   22 100/1000 BaseX + 2 Combo + 2 1/10G STK/UPLINK,
+  Part Number:                   903175-90,
+  Hardware Revision:             05,
+  Serial Number:                 P3182183,
+  Manufacture Date:              AUG 01 2013,
+  Admin Status:                  POWER ON,
+  Operational Status:            UP,
+  Number Of Resets:              57
+  MAC Address:                   e8:e7:32:98:67:3c,
+
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show ip router database
+Total IPRM IPv4 routes: 3
+
+    Destination        Gateway                 Interface            Protocol Metric     Tag
+------------------+---------------+--------------------------------+--------+-------+----------
+0.0.0.0/0          11.87.22.81    external                         STATIC         1          0
+11.21.254.240/28  11.21.254.241  internal                         LOCAL          1          0
+11.87.22.80/30    11.87.22.82    external                         LOCAL          1          0
+
+
+Inactive Static Routes
+Destination       Gateway        Metric
+-----------------+--------------+------
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show ip service
+
+  Name                   Port   Status  
+----------------------+-------+---------
+  ftp                      21   disabled
+  ssh                      22   enabled 
+  telnet                   23   disabled
+  udp-relay                67   enabled 
+  http                     80   disabled
+  network-time            123   enabled 
+  snmp                    161   disabled
+  secure-http             443   disabled
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show ip interface
+Total 3 interfaces
+             Name                   IP Address     Subnet Mask   Status Forward  Device
+--------------------------------+---------------+---------------+------+-------+--------
+Loopback                         127.0.0.1       255.0.0.0           UP      NO Loopback
+external                         11.87.22.82    255.255.255.252     UP     YES vlan 1  
+internal                         11.21.254.241  255.255.255.240     UP     YES vlan 2  
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show ip http
+Web Management = off
+Web Management Force SSL = off
+Web Management Http Port = 80
+Web Management Https Port = 443
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show ip protocols
+Router ID				= 11.87.22.82,
+Primary addr				= 11.87.22.82,
+
+RIP status				= Not Loaded,
+RIPng status				= Not Loaded,
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show ip route-pref
+  Protocol    Route Preference Value
+------------+------------------------
+  Local                 1
+  Static                2
+  RIP                 120
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show dhcp-server statistics
+General:
+  DHCP Server Name              : 11.21.254.241,
+  DHCP Server Status            : Enabled,
+  Total Subnets Managed         : 1,
+  Total Subnets Used            : 1,
+  Total Subnets Unused          : 0,
+  Total Subnets Full            : 0,
+  DHCP Server System Up Time    : FRI JAN 10 14:01:54.29806,
+    Lease DB Sync time (in sec) : 60,
+      Last sync time            : TUE MAY 05 09:56:50 2015,
+      Next sync time		: TUE MAY 05 09:57:50 2015
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show dhcp-server leases count
+
+Total leases: 9
+  Static Leases     : 0
+  Dynamic Leases    : 9
+
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show dhcp-server leases
+
+Total leases: 9
+
+IP Address        MAC address        Lease Granted         Lease Expiry          Type       
+-----------------+------------------+---------------------+---------------------+-----------
+11.21.254.245    00:30:ab:2b:19:6d  MAY 05 06:11:49 2015  MAY 06 06:11:49 2015  DYNAMIC
+11.21.254.246    00:30:ab:2b:19:22  MAY 05 09:10:17 2015  MAY 06 09:10:17 2015  DYNAMIC
+11.21.254.247    00:30:ab:2b:19:1d  MAY 05 06:49:46 2015  MAY 06 06:49:46 2015  DYNAMIC
+11.21.254.248    00:30:ab:2b:19:f7  MAY 05 02:16:47 2015  MAY 06 02:16:47 2015  DYNAMIC
+11.21.254.249    00:30:ab:2b:19:46  MAY 05 05:06:11 2015  MAY 06 05:06:11 2015  DYNAMIC
+11.21.254.250    00:30:ab:2b:19:26  MAY 05 01:41:19 2015  MAY 06 01:41:19 2015  DYNAMIC
+11.21.254.251    00:30:ab:2b:19:bf  MAY 05 09:44:26 2015  MAY 06 09:44:26 2015  DYNAMIC
+11.21.254.252    00:30:ab:2b:19:59  MAY 05 06:22:37 2015  MAY 06 06:22:37 2015  DYNAMIC
+11.21.254.253    00:30:ab:2b:19:db  MAY 05 06:03:20 2015  MAY 06 06:03:20 2015  DYNAMIC
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show lldp local-system
+Local LLDP Agent System Data:
+  Chassis ID Subtype          = 4 (MAC Address),
+  Chassis ID                  = e8:e7:32:98:67:3c,
+  System Name                 = BellBoy_AL_Main,
+  System Description          = Alcatel-Lucent OS6450-U24 6.6.4.197.R01 Service Release, August 13, 2013.,
+  Capabilities Supported      = Bridge Router,
+  Capabilities Enabled        = Bridge Router,
+  LLDP Mode                   = Bridge Mode,
+  LLDPDU Transmit Interval    = 30 seconds,
+  TTL Hold Multiplier         = 4,
+  LLDPDU Transmit Delay       = 2 seconds,
+  Reinitialization Delay      = 2 seconds,
+  MIB Notification Interval   = 5 seconds,
+  Fast Start Count            = 3,
+  Management Address Type     = 1 (IPv4),
+  Management IP Address       = 11.21.254.241
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show lldp remote-system
+Remote LLDP Agents on Local Slot/Port 1/1:
+
+    Chassis e8:e7:32:87:51:38, Port 1009:
+      Remote ID                   = 1,
+      Chassis Subtype             = 4 (MAC Address),
+      Port Subtype                = 7 (Locally assigned),
+      Port Description            = (null),
+      System Name                 = (null),
+      System Description          = (null),
+      Capabilities Supported      = none supported,
+      Capabilities Enabled        = none enabled
+
+Remote LLDP Agents on Local Slot/Port 1/23:
+
+    Chassis e8:e7:32:87:4e:44, Port 1001:
+      Remote ID                   = 2,
+      Chassis Subtype             = 4 (MAC Address),
+      Port Subtype                = 7 (Locally assigned),
+      Port Description            = (null),
+      System Name                 = (null),
+      System Description          = (null),
+      Capabilities Supported      = none supported,
+      Capabilities Enabled        = none enabled
+
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show health
+* - current value exceeds threshold
+
+Device                          1 Min  1 Hr  1 Hr
+Resources          Limit   Curr   Avg    Avg   Max  
+-----------------+-------+------+------+-----+---- 
+Receive              80     01     01    01    01  
+Transmit/Receive     80     01     01    01    01  
+Memory               80     79     79    79    79  
+Cpu                  80     27     25    23    41  
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show arp
+
+Total 13 arp entries
+ Flags (P=Proxy, V=VRRP)
+
+ IP Addr           Hardware Addr       Type       Flags   Port     Interface   Name
+-----------------+-------------------+----------+-------+--------+-----------+----------
+ 11.21.254.242    e8:e7:32:87:4e:44   DYNAMIC               1/23  vlan 2                                      
+ 11.21.254.243    e8:e7:32:88:39:f8   DYNAMIC               1/23  vlan 2                                      
+ 11.21.254.244    e8:e7:32:87:51:38   DYNAMIC                1/1  vlan 2                                      
+ 11.21.254.245    00:30:ab:2b:19:6d   DYNAMIC               1/23  vlan 2                                      
+ 11.21.254.246    00:30:ab:2b:19:22   DYNAMIC               1/23  vlan 2                                      
+ 11.21.254.247    00:30:ab:2b:19:1d   DYNAMIC               1/23  vlan 2                                      
+ 11.21.254.248    00:30:ab:2b:19:f7   DYNAMIC               1/23  vlan 2                                      
+ 11.21.254.249    00:30:ab:2b:19:46   DYNAMIC               1/23  vlan 2                                      
+ 11.21.254.250    00:30:ab:2b:19:26   DYNAMIC                1/1  vlan 2                                      
+ 11.21.254.251    00:30:ab:2b:19:bf   DYNAMIC                1/1  vlan 2                                      
+ 11.21.254.252    00:30:ab:2b:19:59   DYNAMIC                1/1  vlan 2                                      
+ 11.21.254.253    00:30:ab:2b:19:db   DYNAMIC                1/1  vlan 2                                      
+ 11.87.22.81      00:1d:b5:d3:39:bb   DYNAMIC               1/24  vlan 1                                      
+
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show arp summary
+
+   Type               Count   
+-----------------+--------------
+ Total                   13
+
+ Static                   0
+ Dynamic                 13
+ Authenticated            0
+ Proxy                    0
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show amap
+
+AMAP :
+  Operational Status = enabled, 
+  Common    Phase Timeout Interval (seconds) = 300,
+  Discovery Phase Timeout Interval (seconds) = 30 
+
+
+Remote Host 'BellBoy_AL_Net3' On Port 1/1 Vlan 2 :
+  Remote Host Device      = OS6450-10, 
+  Remote Base MAC         = e8:e7:32:87:51:38, 
+  Remote Interface        = 1/9, 
+  Remote Vlan             = 2, 
+  Number Of Remote IP Address(es) Configured = 1,
+  Remote IP(s) = 
+   11.21.254.244 
+
+
+Remote Host 'BellBoy_AL_Net2' On Port 1/23 Vlan 2 :
+  Remote Host Device      = OS6450-10, 
+  Remote Base MAC         = e8:e7:32:87:4e:44, 
+  Remote Interface        = 1/1, 
+  Remote Vlan             = 2, 
+  Number Of Remote IP Address(es) Configured = 1,
+  Remote IP(s) = 
+   11.21.254.242 
+
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show spantree
+  Spanning Tree Path Cost Mode : AUTO
+ Vlan STP Status Protocol Priority
+-----+----------+--------+--------------
+    1      ON       RSTP   32768 (0x8000)
+    2      ON       RSTP   32768 (0x8000)
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show configuration snapshot
+! Stack Manager :
+! Chassis :
+system name BellBoy_AL_Main
+system daylight savings time disable
+! Configuration:
+! VLAN :
+vlan 1 enable name "external"
+vlan 2 enable name "internal"
+vlan 2 port default 1/1
+vlan 2 port default 1/2
+vlan 2 port default 1/3
+vlan 2 port default 1/4
+vlan 2 port default 1/5
+vlan 2 port default 1/6
+vlan 2 port default 1/7
+vlan 2 port default 1/8
+vlan 2 port default 1/9
+vlan 2 port default 1/10
+vlan 2 port default 1/23
+! VLAN SL:
+! IP :
+no ip service ftp
+ip service ssh
+no ip service telnet
+ip service udp-relay
+no ip service http
+ip service network-time
+no ip service snmp
+no ip service secure-http
+ip interface "external" address 11.87.22.82 mask 255.255.255.252 vlan 1 ifindex 1
+ip interface "internal" address 11.21.254.241 mask 255.255.255.240 vlan 2 ifindex 2
+! IPMS :
+! AAA :
+aaa authentication console "local" 
+no aaa authentication ftp
+no aaa authentication http
+aaa authentication ssh "local" 
+! PARTM :
+! 802.1x :
+! QOS :
+! Policy manager :
+! Session manager :
+session timeout cli 1000
+session prompt default "BellBoy_AL_Main ->"
+! SNMP :
+snmp security no security
+snmp authentication trap enable
+snmp trap to webview disable
+! RIP :
+! IPv6 :
+! IP multicast :
+! IPRM :
+ip static-route 0.0.0.0/0 gateway 11.87.22.81 metric 1
+! RIPng :
+! Health monitor :
+health threshold temperature 78
+! Interface :
+! Udld :
+! Port Mapping :
+! Link Aggregate :
+! VLAN AGG:
+! 802.1Q :
+! Spanning tree :
+bridge mode 1x1 
+! Bridging :
+! Bridging :
+! Port mirroring :
+! UDP Relay :
+! System service :
+swlog console level info
+! SSH :
+! VRRP :
+! Web :
+no ip http server
+! AMAP :
+! Lan  Power :
+! NTP :
+! RDP :
+! VLAN STACKING:
+! EFM-OAM :
+! SAA :
+! Loopback-detection :
+! ERP :
+! TEST-OAM :
+! DHL :
+! LLDP :
+! DHCP Server :
+dhcp-server enable
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show vlan
+                              stree                 mble   src        
+ vlan  type  admin   oper   1x1   flat   auth   ip   tag   lrn   name
+-----+-----+------+------+------+------+----+-----+-----+------+----------
+   1    std   on     on     on    on     off    on   off     on   external                        
+   2    std   on     on     on    on     off    on   off     on   internal                        
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show mac-address-table
+Legend: Mac Address: * = address not valid
+
+   Vlan      Mac Address          Type       Protocol    Operation    Interface 
+  ------+-------------------+--------------+-----------+------------+-----------
+     2    00:30:ab:2b:19:26        learned         ---     bridging       1/1  
+     2    00:30:ab:2b:19:59        learned         ---     bridging       1/1  
+     2    00:30:ab:2b:19:bf        learned         ---     bridging       1/1  
+     2    00:30:ab:2b:19:db        learned         ---     bridging       1/1  
+     2    e8:e7:32:87:51:38        learned         ---     bridging       1/1  
+     2    e8:e7:32:87:51:42        learned         ---     bridging       1/1  
+     2    00:30:ab:2b:19:1d        learned         ---     bridging       1/23 
+     2    00:30:ab:2b:19:22        learned         ---     bridging       1/23 
+     2    00:30:ab:2b:19:46        learned         ---     bridging       1/23 
+     2    00:30:ab:2b:19:6d        learned         ---     bridging       1/23 
+     2    00:30:ab:2b:19:f7        learned         ---     bridging       1/23 
+     2    e8:e7:32:87:4e:44        learned         ---     bridging       1/23 
+     2    e8:e7:32:87:4e:46        learned         ---     bridging       1/23 
+     2    e8:e7:32:88:39:f8        learned         ---     bridging       1/23 
+     1    00:1d:b5:d3:39:bb        learned         ---     bridging       1/24 
+     1    e0:2f:6d:23:b6:c9        learned         ---     bridging       1/24 
+
+Total number of Valid MAC addresses above = 16
+
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> show mac-address-table aging-time
+Mac Address Aging Time (seconds) = 300
+BellBoy_AL_Main -> 
+BellBoy_AL_Main -> 
